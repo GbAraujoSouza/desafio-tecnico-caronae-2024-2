@@ -14,5 +14,7 @@ export const NavBarItems = styled.ul`
   display: flex;
   gap: 2rem;
   list-style: none;
+	margin-left: 0;
+	padding-left: 0;
 `
 
