@@ -6,8 +6,13 @@ import {
   FilterButton,
   ListContainer,
   SearchInput,
+  FilterButtonsSection,
+  Divider,
+  SearchFilter,
 } from "./styles";
 import RideService from "../../services/RideService";
+import CalendarIcon from "../../assets/calendar.svg"
+import SearchIcon from "../../assets/search-icon.svg"
 
 interface RidesData {
   caronas: [
@@ -36,6 +41,8 @@ const RideList: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const [onGoingFilter, setOnGoingFilter] = useState<boolean>(true);
+
   const fetchRides = async () => {
     try {
       const response = await RideService.getAllRides();
@@ -57,10 +64,19 @@ const RideList: React.FC = () => {
   return (
     <ListContainer>
       <FilterBar>
-        <FilterButton>Segunda-feira, 22/07</FilterButton>
-        <FilterButton>Chegando na UFRJ</FilterButton>
-        <FilterButton>Saindo da UFRJ</FilterButton>
-        <SearchInput type="text" placeholder="Buscar" />
+        <FilterButtonsSection>
+          <FilterButton $selected>
+            <img src={CalendarIcon} alt="Calendar icon" />
+            Segunda-feira, 22/07
+          </FilterButton>
+          <Divider />
+          <FilterButton $selected={onGoingFilter} onClick={() => setOnGoingFilter(true)}>Chegando na UFRJ</FilterButton>
+          <FilterButton $selected={!onGoingFilter} onClick={() => setOnGoingFilter(false)}>Saindo da UFRJ</FilterButton>
+        </FilterButtonsSection>
+        <SearchFilter>
+          <img src={SearchIcon} />
+          <SearchInput type="text" placeholder="Buscar" />
+        </SearchFilter>
       </FilterBar>
       <RideGrid>
         {rides?.caronas.map((carona, index) => {
