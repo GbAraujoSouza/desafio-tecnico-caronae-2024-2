@@ -28,7 +28,7 @@ describe("SearchInput testing", () => {
       </MemoryRouter>,
     );
 
-    const inputElement = await screen.findByPlaceholderText("Buscar");
+    const inputElement = await screen.findByPlaceholderText<HTMLInputElement>("Buscar");
     fireEvent.change(inputElement, { target: { value: "Leblon" } });
     expect(inputElement.value).toBe("Leblon");
   });
