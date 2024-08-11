@@ -1,6 +1,6 @@
 # Desafio Técnico Caronaê
 
-Este projeto consiste na resolução do desafio técnico para o processo seletivo do Caronaê 2024.2. O Desafio consiste em implementar uma aplicação web que consuma dados de uma API Rest externa de caronas, contendo uma pagina para listar todas as caronas e uma pagina com os detalhes específicos de uma carona.
+Este projeto consiste na resolução do desafio técnico para o processo seletivo do Caronaê 2024.2. O Desafio consiste em implementar uma aplicação web que consuma dados de uma API Rest externa de caronas, contendo uma pagina para listar todas as caronas e uma pagina com os detalhes específicos de uma carona. O projeto foi hospedado na plataforma Vercel e pode ser acessado em [https://desafio-tecnico-caronae.vercel.app/](https://desafio-tecnico-caronae.vercel.app/)
 
 
 
@@ -13,11 +13,16 @@ Este projeto consiste na resolução do desafio técnico para o processo seletiv
 ## Tabela de Conteúdo
 
 
- 1. [Tecnologias utilizadas](#tecnologias-utilizadas)
- 2. [Download](#download)
- 3. [Utilização](#utilização)
+ 1. [Preview](#preview)
+ 2. [Tecnologias utilizadas](#tecnologias-utilizadas)
+ 3. [Download](#download)
+ 4. [Utilização](#utilização)
+
+## Preview do Projeto
+
+![](public/preview-caronae.gif)
  
-## Tecnologias utilizadas
+## Tecnologias Utilizadas
 
 Essas são as frameworks e ferramentas que foram utilizadas no desenvolvimento deste projeto:
 
@@ -26,6 +31,7 @@ Essas são as frameworks e ferramentas que foram utilizadas no desenvolvimento d
  - [Typescript](https://www.typescriptlang.org/)
  - [Vite](https://vitejs.dev/)
  - [Docker](https://www.docker.com/)
+ - [Vercel](https://vercel.com/)
 
 ## Download
 
