@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Desafio Técnico Caronaê
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste na resolução do desafio técnico para o processo seletivo do Caronaê 2024.2. O Desafio consiste em implementar uma aplicação web que consuma dados de uma API Rest externa de caronas, contendo uma pagina para listar todas as caronas e uma pagina com os detalhes específicos de uma carona.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+![Badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Badge](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![Badge](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Badge](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=whitehttps://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+ 
+ 
+## Tabela de Conteúdo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+ 1. [Tecnologias utilizadas](#tecnologias-utilizadas)
+ 2. [Download](#download)
+ 3. [Utilização](#utilização)
+ 
+## Tecnologias utilizadas
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Essas são as frameworks e ferramentas que foram utilizadas no desenvolvimento deste projeto:
+
+ - [React JS](https://react.dev/)
+ - [Styled Components](https://styled-components.com/)
+ - [Typescript](https://www.typescriptlang.org/)
+ - [Vite](https://vitejs.dev/)
+ - [Docker](https://www.docker.com/)
+
+## Download
+
+*Para que seja possível a execução dos arquivos deste repositório, o usuário deve clonar através da ferramenta **[git](https://git-scm.com/downloads)**. Abrindo o terminal do seu sistema operacional ou o GitBash, insira o seguinte comando na pasta desejada:*
+
+``` git
+git clone https://github.com/GbAraujoSouza/desafio-tecnico-caronae-2024-2.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Utilização
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Utilizando Docker
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+É necessário ter o [docker](https://docs.docker.com/engine/install/) e o [docker compose](https://docs.docker.com/compose/install/) instalado e em execução no computador. Na pasta raiz do projeto, execute o comando:
+
+``` bash
+docker compose up
+
 ```
+A aplicação poderá ser acessada então em [http://localhost:5173/](http://localhost:5173/)
+
+
+### Node.js (alternativa)
+
+Alternativamente, é possível instalar o projeto utilizando [Node.js](https://nodejs.org/en/download/package-manager). Na pasta raiz do projeto, instale as dependências com o comando:
+
+``` bash
+npm install
+
+```
+
+Em seguida, execute o projeto com o comando:
+``` bash
+npm run dev
+
+```
+Finalmente, a aplicação estará disponível em [http://localhost:5173/](http://localhost:5173/)
+
+
