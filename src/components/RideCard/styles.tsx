@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -9,6 +10,7 @@ export const CardContainer = styled.div`
   border-radius: 8px;
   color: ${({ theme }) => theme.COLORS.NEUTRAL.DARKEST};
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  text-decoration: none;
 `;
 
 export const DriverInfo = styled.div`

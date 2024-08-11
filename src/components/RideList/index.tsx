@@ -83,6 +83,7 @@ const RideList: React.FC = () => {
           return (
             <RideCard
               key={index}
+              rideId={index}
               driverName={carona.motorista.nome}
               driverProfileUrl={carona.motorista.foto}
               departureTime={carona.horario_partida}

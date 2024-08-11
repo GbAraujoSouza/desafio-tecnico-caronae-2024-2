@@ -26,6 +26,7 @@ interface RideCardProps {
   departureLocation: string;
   arrivalLocation: string;
   seatsAvailable: number;
+  rideId: number;
 }
 
 const getSeatsIcon = (seatsAvailable: number) => {
@@ -42,6 +43,7 @@ const RideCard: React.FC<RideCardProps> = ({
   departureLocation,
   arrivalLocation,
   seatsAvailable,
+  rideId
 }) => {
   const [driverPhoto, setDriverPhoto] = useState<string>(driverProfileUrl);
 
@@ -50,7 +52,7 @@ const RideCard: React.FC<RideCardProps> = ({
   }
 
   return (
-    <CardContainer>
+    <CardContainer to={`/details/${rideId}`}>
       <DriverInfo>
         <DriverPhoto
           src={driverPhoto}
