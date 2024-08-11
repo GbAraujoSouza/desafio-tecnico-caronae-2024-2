@@ -23,6 +23,7 @@ import UsersOrange from "../../assets/users-orange.svg";
 import UsersRed from "../../assets/users-red.svg";
 import { DriverPhoto, SeatsInfo } from "../../components/RideCard/styles";
 import { getCurrentDateFormated } from "../../utils/currentDate";
+import { brPhoneFormater } from "../../utils/brPhoneFormater";
 
 interface Ride {
   motorista: {
@@ -101,7 +102,7 @@ const RideDetails: React.FC = () => {
               />
               <DriverInfo>
                 <span>{ride.motorista.situacao}</span>
-                <span>{ride.motorista.telefone}</span>
+                <span>{brPhoneFormater(ride.motorista.telefone)}</span>
               </DriverInfo>
             </DiverInfoContainer>
           </RideDetailsCard>
