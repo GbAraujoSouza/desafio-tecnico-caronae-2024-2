@@ -22,6 +22,7 @@ import UsersGreen from "../../assets/users-green.svg";
 import UsersOrange from "../../assets/users-orange.svg";
 import UsersRed from "../../assets/users-red.svg";
 import { DriverPhoto, SeatsInfo } from "../../components/RideCard/styles";
+import { getCurrentDateFormated } from "../../utils/currentDate";
 
 interface Ride {
   motorista: {
@@ -72,7 +73,7 @@ const RideDetails: React.FC = () => {
       <Header />
       <RideDetailsContent>
         <RideDateSection>
-          <RideDate>Segunda-feira, 22/07</RideDate>
+          <RideDate>{getCurrentDateFormated()}</RideDate>
           <Button primary text="Pedir Carona" />
         </RideDateSection>
 

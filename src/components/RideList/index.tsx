@@ -13,6 +13,7 @@ import {
 import RideService from "../../services/RideService";
 import CalendarIcon from "../../assets/calendar.svg"
 import SearchIcon from "../../assets/search-icon.svg"
+import { getCurrentDateFormated } from "../../utils/currentDate";
 
 interface RidesData {
   caronas: [
@@ -67,7 +68,7 @@ const RideList: React.FC = () => {
         <FilterButtonsSection>
           <FilterButton $selected>
             <img src={CalendarIcon} alt="Calendar icon" />
-            Segunda-feira, 22/07
+            {getCurrentDateFormated()}
           </FilterButton>
           <Divider />
           <FilterButton $selected={onGoingFilter} onClick={() => setOnGoingFilter(true)}>Chegando na UFRJ</FilterButton>
