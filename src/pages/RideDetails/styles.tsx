@@ -67,7 +67,7 @@ export const PathList = styled.ul`
 
 export const RoadContainer = styled.div`
   display: flex;
-  width: 20px;
+  flex-direction: column;
   padding: 9.2px;
   justify-content: center;
   align-items: center;
@@ -80,4 +80,5 @@ export const RoadLine = styled.div`
   width: 2.42px;
   height: 15px;
   background-color: #fff;
+  border-radius: 1.84px;
 `;
