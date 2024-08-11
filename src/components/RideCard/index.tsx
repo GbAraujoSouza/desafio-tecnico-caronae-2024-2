@@ -4,19 +4,13 @@ import {
   DriverInfo,
   DriverName,
   DriverPhoto,
-  Location,
   SeatsInfo,
-  TravelInfo,
-  TravelLocationInfo,
-  TravelTimeInfo,
 } from "./styles";
 import UsersGreen from "../../assets/users-green.svg";
 import UsersOrange from "../../assets/users-orange.svg";
 import UsersRed from "../../assets/users-red.svg";
-import TargetIcon from "../../assets/target-icon.svg";
-import FlagIcon from "../../assets/flag-icon.svg";
-import LongRoad from "../../assets/long-road.svg";
 import DefaulDriverPhoto from "../../assets/default-user-photo.svg";
+import TravelInformation from "../TravelInformation";
 
 interface RideCardProps {
   driverName: string;
@@ -43,13 +37,13 @@ const RideCard: React.FC<RideCardProps> = ({
   departureLocation,
   arrivalLocation,
   seatsAvailable,
-  rideId
+  rideId,
 }) => {
   const [driverPhoto, setDriverPhoto] = useState<string>(driverProfileUrl);
 
   const handleNotFoundDriverPhoto = () => {
-    setDriverPhoto(DefaulDriverPhoto)
-  }
+    setDriverPhoto(DefaulDriverPhoto);
+  };
 
   return (
     <CardContainer to={`/details/${rideId}`}>
@@ -66,25 +60,13 @@ const RideCard: React.FC<RideCardProps> = ({
         </SeatsInfo>
       </DriverInfo>
 
-      <TravelInfo>
-        <TravelLocationInfo>
-          <Location>
-            <span>{departureLocation}</span>
-            <img src={TargetIcon} alt="Target icon" />
-          </Location>
+      <TravelInformation
+        departureTime={departureTime}
+        arrivalTime={arrivalTime}
+        departureLocation={departureLocation}
+        arrivalLocation={arrivalLocation}
+      />
 
-          <img src={LongRoad} alt="Road image" />
-
-          <Location>
-            <img src={FlagIcon} alt="Flag icon" />
-            <span>{arrivalLocation}</span>
-          </Location>
-        </TravelLocationInfo>
-        <TravelTimeInfo>
-          <span>{departureTime}</span>
-          <span>{arrivalTime}</span>
-        </TravelTimeInfo>
-      </TravelInfo>
     </CardContainer>
   );
 };
