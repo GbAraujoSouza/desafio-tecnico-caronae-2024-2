@@ -11,6 +11,11 @@ export const CardContainer = styled(Link)`
   color: ${({ theme }) => theme.COLORS.NEUTRAL.DARKEST};
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   text-decoration: none;
+  pointer: cursor;
+  &:hover {
+    background-color: ${({ theme }) => theme.COLORS.NEUTRAL.LIGHT}; 
+    border-color: ${({ theme }) => theme.COLORS.NEUTRAL.DARK};
+  }
 `;
 
 export const DriverInfo = styled.div`

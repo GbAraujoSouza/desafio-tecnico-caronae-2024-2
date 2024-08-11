@@ -5,7 +5,7 @@ interface IStyledButtonProps {
 }
 
 export const StyledButton = styled.button<IStyledButtonProps>`
-  padding: 10px 16px;
+  padding: 0.625rem 1rem;
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.COLORS.PRIMARY};
   background-color: ${(props) => (props.$primary ? props.theme.COLORS.PRIMARY : props.theme.COLORS.NEUTRAL.LIGHTEST)};
@@ -13,4 +13,9 @@ export const StyledButton = styled.button<IStyledButtonProps>`
   color: ${(props) => (props.$primary ? props.theme.COLORS.NEUTRAL.LIGHTEST : props.theme.COLORS.PRIMARY)};
   font-weight: 600;
   font-size: 0.875rem;
+  cursor: pointer;
+  &:hover { 
+     background-color: ${({ $primary, theme }) => ($primary ? theme.COLORS.NEUTRAL.LIGHTEST : theme.COLORS.PRIMARY)};
+    color: ${({ $primary, theme }) => ($primary ? theme.COLORS.PRIMARY : theme.COLORS.NEUTRAL.LIGHTEST)};
+  }
 `;
