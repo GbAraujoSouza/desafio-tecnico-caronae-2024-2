@@ -39,7 +39,7 @@ interface SeatsInfoProps {
 
 export const SeatsInfo = styled.div<SeatsInfoProps>`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   color: ${({$seats, theme}) => {
     if ($seats > 2) return theme.COLORS.ACTION.GREEN;

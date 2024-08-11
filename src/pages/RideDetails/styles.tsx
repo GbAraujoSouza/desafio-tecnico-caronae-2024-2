@@ -23,4 +23,63 @@ export const DetailCardsContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, minmax(21.16rem, 1fr));
   gap: 1.5rem;
-`
+`;
+
+export const DiverInfoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+`;
+
+export const DriverInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  color: ${({ theme }) => theme.COLORS.NEUTRAL.DARK};
+`;
+
+export const RideDescription = styled.p`
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: ${({ theme }) => theme.COLORS.NEUTRAL.DARK};
+`;
+
+export const PathInfoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+export const PathList = styled.ul`
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 28px;
+`;
+
+export const RoadContainer = styled.div`
+  display: flex;
+  transform: rotate(-90deg);
+  padding: 9.2px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.2px;
+  border-radius: 6.9px;
+  background-color: ${({ theme }) => theme.COLORS.NEUTRAL.DARKEST};
+`;
+
+export const RoadLine = styled.div`
+  width: 2.42px;
+  height: 15px;
+  transform: rotate(-90deg);
+  border-radius: 1.84px;
+  background: #fff;
+`;
